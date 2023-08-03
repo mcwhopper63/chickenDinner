@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="main.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <section>
+            <div class="input">
+                <h1>Pick your winner</h1>
+                <div class="fight-row">
+                    <div class="left-corner">
+                        <img
+                            src="./SANDHAGEN_CORY_L_09-17.png"
+                            alt=""
+                            class="left-corner-img"
+                            id="left-corner-img"
+                        />
+                        <button type="button" id="sand" value="Sandhagen">
+                            Sandhagen
+                        </button>
+                    </div>
+                    <div class="corner-stats">vs.</div>
+                    <div class="right-corner">
+                        <img
+                            src="./FONT_ROB_L_04-08.png"
+                            alt=""
+                            class="right-corner-img"
+                        />
+                        <button type="button" id="font" value="Font">
+                            Font
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="output">
+                <h1>Your winners:</h1>
+                <p id="picks-display" class="output"></p>
+            </div>
+        </section>
+
+        <script>
+            const sand = document.getElementById('sand');
+            const font = document.getElementById('font');
+            const output = document.getElementById('picks-display');
+
+            function displaySand() {
+                output.innerText = sand.value;
+                // output.appendChild('left-corner-img');
+            }
+            function displayFont() {
+                output.innerText = font.value;
+            }
+
+            sand.addEventListener('click', displaySand);
+            font.addEventListener('click', displayFont);
+        </script>
+    </body>
+</html>

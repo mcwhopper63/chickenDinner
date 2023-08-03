@@ -1,0 +1,41 @@
+img {
+    width: 150px;
+}
+
+/* h1 {
+    margin: auto;
+} */
+
+.fight-row {
+    display: flex;
+    /* flex-direction: column; */
+    /* text-align: center; */
+}
+
+.output {
+    margin-top: 80px;
+    /* text-align: center; */
+}
+
+.left-corner,
+.right-corner {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    width: 200px;
+}
+#sand,
+#font {
+    margin-top: 1rem;
+}
+
+.corner-stats {
+    padding: 5rem;
+    font-size: 5rem;
+}
+
+.picks-display {
+    font-size: 5rem;
+}
