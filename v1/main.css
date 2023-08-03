@@ -11,7 +11,8 @@ h2 {
     border: 1px green solid;
 }
 
-.fight-row {
+.fight-row,
+.results-row {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -48,4 +49,14 @@ h2 {
 img {
     width: 100%;
     border: 1px black solid;
+}
+
+p {
+    text-align: center;
+    font-weight: 900;
+}
+
+.vs,
+.beats {
+    margin: 0 1rem;
 }

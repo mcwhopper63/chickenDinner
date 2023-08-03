@@ -9,7 +9,7 @@
     <body>
         <section>
             <div class="input">
-                <h2>Pick your Winner</h2>
+                <h2>Pick your Winners</h2>
                 <div class="fight-row">
                     <p class="fight-number">Fight 1</p>
                     <div class="fight-component">
@@ -22,6 +22,7 @@
                             <button
                                 class="fighter-a-btn btn"
                                 id="sandhagen-btn"
+                                onclick="pickA1()"
                             >
                                 Sandhagen
                             </button>
@@ -33,25 +34,91 @@
                                 alt="font"
                                 id="font-pic"
                             />
-                            <button class="fighter-b-btn btn">Font</button>
+                            <button
+                                class="fighter-b-btn btn"
+                                onclick="pickB1()"
+                            >
+                                Font
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fight-row">
+                    <p class="fight-number">Fight 2</p>
+                    <div class="fight-component">
+                        <div class="fighter-a">
+                            <img
+                                src="./assets/andrade.png"
+                                alt="andrade"
+                                id="andrade-pic"
+                            />
+                            <button
+                                class="fighter-a-btn btn"
+                                id="andrade-btn"
+                                onclick="pickA2()"
+                            >
+                                Andrade
+                            </button>
+                        </div>
+                        <p class="vs">vs.</p>
+                        <div class="fighter-b">
+                            <img
+                                src="./assets/suarez.png"
+                                alt="suarez"
+                                id="suarez-pic"
+                            />
+                            <button
+                                class="fighter-b-btn btn"
+                                onclick="pickB2()"
+                            >
+                                Suarez
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="output">
-                <h2>Your Winner</h2>
+                <h2>Your Winners</h2>
                 <div class="results-row">
                     <p class="fight-number">Fight 1</p>
                     <div class="results-component">
                         <div class="display-winner-pick">
-                            <img src="" alt="" />
-                            <p class="display-winner-pick-name"></p>
+                            <img id="winner-pick-img1" src="" alt="" />
+                            <p
+                                class="display-winner-pick-name"
+                                id="winner-pick-p1"
+                            ></p>
                         </div>
                         <p class="beats">beats</p>
                         <div class="display-loser-pick">
-                            <img src="" alt="" />
-                            <p class="display-loser-pick-name"></p>
+                            <img id="loser-pick-img1" src="" alt="" />
+                            <p
+                                class="display-loser-pick-name"
+                                id="loser-pick-p1"
+                            ></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="results-row">
+                    <p class="fight-number">Fight 2</p>
+                    <div class="results-component">
+                        <div class="display-winner-pick">
+                            <img id="winner-pick-img2" src="" alt="" />
+                            <p
+                                class="display-winner-pick-name"
+                                id="winner-pick-p2"
+                            ></p>
+                        </div>
+                        <p class="beats">beats</p>
+                        <div class="display-loser-pick">
+                            <img id="loser-pick-img2" src="" alt="" />
+                            <p
+                                class="display-loser-pick-name"
+                                id="loser-pick-p2"
+                            ></p>
                         </div>
                     </div>
                 </div>
@@ -59,22 +126,51 @@
         </section>
 
         <script>
-            const sand = document.getElementsById('sandhagen-btn');
+            function pickA1() {
+                console.log('this works A');
+                document.getElementById('winner-pick-img1').src =
+                    './assets/sandhagen.png';
+                document.getElementById('winner-pick-p1').innerText =
+                    'Sandhagen';
 
-            const output = document.getElementById('picks-display');
-
-            function displaySand() {
-                // sand.innerText = sand.value;
-                console.log('sand button works');
+                document.getElementById('loser-pick-img1').src =
+                    './assets/font.png';
+                document.getElementById('loser-pick-p1').innerText = 'Font';
             }
 
-            sand.addEventListener('click', displaySand);
+            function pickB1() {
+                console.log('this works A');
+                document.getElementById('winner-pick-img1').src =
+                    './assets/font.png';
+                document.getElementById('winner-pick-p1').innerText = 'Font';
 
-            // function displayFont() {
-            //     display-loser-pick-name.innerText = font.value;
-            // }
+                document.getElementById('loser-pick-img1').src =
+                    './assets/sandhagen.png';
+                document.getElementById('loser-pick-p1').innerText =
+                    'Sandhagen';
+            }
 
-            // font.addEventListener('click', displayFont);
+            function pickA2() {
+                console.log('this works A');
+                document.getElementById('winner-pick-img2').src =
+                    './assets/andrade.png';
+                document.getElementById('winner-pick-p2').innerText = 'Andrade';
+
+                document.getElementById('loser-pick-img2').src =
+                    './assets/suarez.png';
+                document.getElementById('loser-pick-p2').innerText = 'Suarez';
+            }
+
+            function pickB2() {
+                console.log('this works B2');
+                document.getElementById('winner-pick-img2').src =
+                    './assets/suarez.png';
+                document.getElementById('winner-pick-p2').innerText = 'Suarez';
+
+                document.getElementById('loser-pick-img2').src =
+                    './assets/andrade.png';
+                document.getElementById('loser-pick-p2').innerText = 'Andrade';
+            }
         </script>
     </body>
 </html>
