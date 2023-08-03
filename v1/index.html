@@ -9,53 +9,72 @@
     <body>
         <section>
             <div class="input">
-                <h1>Pick your winner</h1>
+                <h2>Pick your Winner</h2>
                 <div class="fight-row">
-                    <div class="left-corner">
-                        <img
-                            src="./SANDHAGEN_CORY_L_09-17.png"
-                            alt=""
-                            class="left-corner-img"
-                            id="left-corner-img"
-                        />
-                        <button type="button" id="sand" value="Sandhagen">
-                            Sandhagen
-                        </button>
-                    </div>
-                    <div class="corner-stats">vs.</div>
-                    <div class="right-corner">
-                        <img
-                            src="./FONT_ROB_L_04-08.png"
-                            alt=""
-                            class="right-corner-img"
-                        />
-                        <button type="button" id="font" value="Font">
-                            Font
-                        </button>
+                    <p class="fight-number">Fight 1</p>
+                    <div class="fight-component">
+                        <div class="fighter-a">
+                            <img
+                                src="./assets/sandhagen.png"
+                                alt="sandhagen"
+                                id="sandhagen-pic"
+                            />
+                            <button
+                                class="fighter-a-btn btn"
+                                id="sandhagen-btn"
+                            >
+                                Sandhagen
+                            </button>
+                        </div>
+                        <p class="vs">vs.</p>
+                        <div class="fighter-b">
+                            <img
+                                src="./assets/font.png"
+                                alt="font"
+                                id="font-pic"
+                            />
+                            <button class="fighter-b-btn btn">Font</button>
+                        </div>
                     </div>
                 </div>
             </div>
+
             <div class="output">
-                <h1>Your winners:</h1>
-                <p id="picks-display" class="output"></p>
+                <h2>Your Winner</h2>
+                <div class="results-row">
+                    <p class="fight-number">Fight 1</p>
+                    <div class="results-component">
+                        <div class="display-winner-pick">
+                            <img src="" alt="" />
+                            <p class="display-winner-pick-name"></p>
+                        </div>
+                        <p class="beats">beats</p>
+                        <div class="display-loser-pick">
+                            <img src="" alt="" />
+                            <p class="display-loser-pick-name"></p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <script>
-            const sand = document.getElementById('sand');
-            const font = document.getElementById('font');
+            const sand = document.getElementsById('sandhagen-btn');
+
             const output = document.getElementById('picks-display');
 
             function displaySand() {
-                output.innerText = sand.value;
-                // output.appendChild('left-corner-img');
-            }
-            function displayFont() {
-                output.innerText = font.value;
+                // sand.innerText = sand.value;
+                console.log('sand button works');
             }
 
             sand.addEventListener('click', displaySand);
-            font.addEventListener('click', displayFont);
+
+            // function displayFont() {
+            //     display-loser-pick-name.innerText = font.value;
+            // }
+
+            // font.addEventListener('click', displayFont);
         </script>
     </body>
 </html>
